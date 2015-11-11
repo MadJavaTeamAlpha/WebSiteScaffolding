@@ -1,27 +1,29 @@
 package alphaWebService;
-import com.sun.net.httpserver.HttpServer;
 import com.sun.jersey.api.container.httpserver.HttpServerFactory;
-import java.io.IOException;
+import com.sun.net.httpserver.HttpServer;
 
 import javax.ws.rs.GET;
+import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
-import javax.ws.rs.Path;
-
+import java.io.IOException;
 /**
  * Created by Team Alpha on 11/10/2015.
  */
 // The Java class will be hosted at the URI path "/scaffolding"
-@Path("/scaffolding")
+@Path("/")
 public class Scaffolding {
 
     //with url param
     // The Java method will process HTTP GET requests
     @GET
-    @Path("/{webScaffoldingChoices}")
+    @Path("/{style}/{framework}/{script}")
     @Produces("text/html")
-    public String getMsg(@PathParam("webScaffoldingChoices") String msg) {
-        String output = "<html><body><h1>Your File Here</h1></body></html> " + "You asked for: " + msg;
+    public String getMsg(@PathParam("style") String style,@PathParam("framework") String framework,@PathParam("script") String script) {
+        String output = "<html><body><p>Style: " + style + "</p> <p>Framework: " + framework + "</p> <p>Script: " + script + "</p></body></html>";
+
+
+
         return output;
     }
 

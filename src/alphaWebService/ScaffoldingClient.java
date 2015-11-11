@@ -16,11 +16,11 @@ public class ScaffoldingClient {
 
     String url = URL;
     String charset = "UTF-8";
-    String param1 = "myParam";
+    String param1 = "hello";
 
     String query = String.format("myParam=%s", URLEncoder.encode(param1, charset));
-
     java.net.URLConnection connection = new URL(url + "?" + query).openConnection();
+    System.out.println(url + "?" + query);
 
     connection.setRequestProperty("Accept-Charset", charset);
 
