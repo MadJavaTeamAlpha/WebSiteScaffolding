@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5e759c99-1737-4f45-b899-a0a5ab65dbf2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/WebSiteScaffolding/alphaWebService/ScaffoldingClient.class" afterPath="$PROJECT_DIR$/out/production/WebSiteScaffolding/alphaWebService/ScaffoldingClient.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/alphaWebService/Scaffolding.java" afterPath="$PROJECT_DIR$/src/alphaWebService/Scaffolding.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/alphaWebService/ScaffoldingClient.java" afterPath="$PROJECT_DIR$/src/alphaWebService/ScaffoldingClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebSiteScaffolding.iml" afterPath="$PROJECT_DIR$/WebSiteScaffolding.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="5e759c99-1737-4f45-b899-a0a5ab65dbf2" name="Default" comment="" />
     <ignored path="WebSiteScaffolding.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -678,12 +672,12 @@
       <option name="number" value="Default" />
       <updated>1447202991439</updated>
       <workItem from="1447202995393" duration="8145000" />
-      <workItem from="1447211823562" duration="5528000" />
+      <workItem from="1447211823562" duration="5718000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13673000" />
+    <option name="totallyTimeSpent" value="13863000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="225" y="73" width="1215" height="754" extended-state="0" />
@@ -707,7 +701,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17988065" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3942598" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3942598" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
