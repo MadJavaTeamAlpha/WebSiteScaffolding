@@ -29,6 +29,7 @@
       <root url="jar://$PROJECT_DIR$/lib/rome-1.0.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/mail-1.4.4.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/wadl-core-1.1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-io-2.4.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
