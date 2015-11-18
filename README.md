@@ -6,6 +6,10 @@ http://localhost:9998/y/bootstrap/jform
 
 Give scaffolding.java a while to get going... like 45sec or so.
 
+* I added in the apache commons-io-2.4.jar into the lib folder. You may have to add it in to the Libraries as well.
+	--File, Project Structure, Libraries, in the "Classes" area, click Plus sign, select the commons-io-2.4.jar to add it to the list
+
+
 
 11/10
 Group meeting
@@ -28,6 +32,7 @@ Group work time in class
 * TODO: see comments in the FileCreator class; need to add to the queues 
  and read/write the index.html as based on the request options
 	--index.html is already being created in the code, but not modified yet
+* added in the apache commons-io-2.4.jar
 
 
 
