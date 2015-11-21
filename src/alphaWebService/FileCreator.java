@@ -1,10 +1,8 @@
 package alphaWebService;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.nio.charset.Charset;
-import java.nio.charset.StandardCharsets;
+import java.io.*;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipOutputStream;
 
 import org.apache.commons.io.*;
 
@@ -17,9 +15,9 @@ public class FileCreator {
 //    Charset charset = StandardCharsets.UTF_8;
 
     //request params coming in from the URL query string; set here for development
-    String cssparam = "Y"; //"Y" or "N" or ""
-    String frameworkparam = "foundation"; //"bootstrap" or "foundation"
-    String scriptparam = "jForm"; //"js" or "jQuery" or "jForm"
+    private String cssparam = "Y"; //"Y" or "N" or ""
+    private String frameworkparam = "foundation"; //"bootstrap" or "foundation"
+    private String scriptparam = "jForm"; //"js" or "jQuery" or "jForm"
 
     //make paths tbd
     //Path indexHTMLFilePath = Paths.get("./src/resources/index.html");
@@ -28,27 +26,30 @@ public class FileCreator {
 
     //make files
     //---template boiler plate files
-    String templateWebSiteBoilerString = "./src/resources/templateWebSiteBoiler";
-    File indexHTMLFile = new File(templateWebSiteBoilerString + "/index.html");
-    File cssFileFolder = new File(templateWebSiteBoilerString + "/css");
-    File bootstrapFileFolder = new File(templateWebSiteBoilerString + "/assets/bootstrap");
-    File foundationFileFolder = new File(templateWebSiteBoilerString + "/assets/foundation");
-    File jsFileFolder = new File(templateWebSiteBoilerString + "/js");
-    File jQueryFile = new File(templateWebSiteBoilerString + "/assets/jquery.js");
-    File jQueryValidationFileFolder = new File(templateWebSiteBoilerString + "/assets/jquery-validation");
+    private String templateWebSiteBoilerString = "./src/resources/templateWebSiteBoiler";
+    private File indexHTMLFile = new File(templateWebSiteBoilerString + "/index.html");
+    private File cssFileFolder = new File(templateWebSiteBoilerString + "/css");
+    private File bootstrapFileFolder = new File(templateWebSiteBoilerString + "/assets/bootstrap");
+    private File foundationFileFolder = new File(templateWebSiteBoilerString + "/assets/foundation");
+    private File jsFileFolder = new File(templateWebSiteBoilerString + "/js");
+    private File jQueryFile = new File(templateWebSiteBoilerString + "/assets/jquery.js");
+    private File jQueryValidationFileFolder = new File(templateWebSiteBoilerString + "/assets/jquery-validation");
 
-    //---product files
-    String productFolderString = "./src/templateWebSiteProduct";
-    File productFileFolder = new File("./src/templateWebSiteProduct");
-    File productAssetFileFolder = new File(productFolderString + "/assets");
+    //---product files to send to consumer
+    private String productFolderString = "./src/templateWebSiteProduct";
+    private File productFileFolder = new File(productFolderString);
+    private File productAssetFileFolder = new File(productFolderString + "/assets");
+    private String productZippedFolder = "./src/templateWebSiteProduct.zip";
 
 
 
     public static void main(String[] args)
     {
-        FileCreator app = new FileCreator();
-        app.writeIndexHTML();
-        app.interrogateParams();
+        FileCreator fileCreator = new FileCreator();
+        fileCreator.writeIndexHTML();
+        fileCreator.interrogateParams();
+        fileCreator.startZipping();
+        fileCreator.sendToConsumer();
     }
 
 
@@ -216,6 +217,7 @@ Write close html
 
     } //end interrogateParams()
 
+
     public void copyFileToDir(File srcFile, File destDir)
     {
         try
@@ -272,20 +274,103 @@ Write close html
         }
     }
 
+    public void deleteFile(File file)
+    {
+        try
+        {
+            FileUtils.forceDelete(file);
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+    }
 //TODO
     //configure index.html
-    //zip up folder
-    //send response of zip file
-    //delete the files in project after sending the response
- /*   try {
-        Thread.sleep(10000);
-    } catch (InterruptedException e) {
-        e.printStackTrace();
+
+
+
+    /*
+     * This code was pulled from http://examples.javacodegeeks.com/core-java/util/zip/zipoutputstream/java-zip-file-example/
+     *
+     */
+    public void startZipping() {
+        try {
+            FileOutputStream fileOutputStream = null;
+
+            File inputFile = productFileFolder;
+            fileOutputStream = new FileOutputStream(productZippedFolder);
+            ZipOutputStream zipOutputStream = new ZipOutputStream(fileOutputStream);
+
+            if (inputFile.isFile())
+                zipFile(inputFile,"",zipOutputStream);
+            else if (inputFile.isDirectory())
+                zipFolder(zipOutputStream,inputFile,"");
+
+            zipOutputStream.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
-    deleteDir(productFileFolder); */
+
+    public void zipFolder(ZipOutputStream zipOutputStream,File inputFile, String parentName)  throws IOException {
+
+        String myname = parentName +inputFile.getName()+"\\";
+
+        ZipEntry folderZipEntry = new ZipEntry(myname);
+        zipOutputStream.putNextEntry(folderZipEntry);
+
+        File[] contents = inputFile.listFiles();
+
+        for (File f : contents){
+            if (f.isFile())
+                zipFile(f,myname,zipOutputStream);
+            else if(f.isDirectory())
+                zipFolder(zipOutputStream,f, myname);
+        }
+        zipOutputStream.closeEntry();
+    }
+
+    public void zipFile(File inputFile,String parentName,ZipOutputStream zipOutputStream) throws IOException{
+
+        // A ZipEntry represents a file entry in the zip archive
+        // We name the ZipEntry after the original file's name
+        ZipEntry zipEntry = new ZipEntry(parentName+inputFile.getName());
+        zipOutputStream.putNextEntry(zipEntry);
+
+        FileInputStream fileInputStream = new FileInputStream(inputFile);
+        byte[] buf = new byte[1024];
+        int bytesRead;
+
+        // Read the input file by chucks of 1024 bytes
+        // and write the read bytes to the zip stream
+        while ((bytesRead = fileInputStream.read(buf)) > 0) {
+            zipOutputStream.write(buf, 0, bytesRead);
+        }
+
+        // close ZipEntry to store the stream to the file
+        zipOutputStream.closeEntry();
 
 
+    }
 
-} //end
+    public void sendToConsumer()
+    {
+        //send response of zip file
+        File newlyCreatedZipFile = new File(productZippedFolder);
+
+//TODO
+        //some code here ?
+
+
+        //delete the files in project after sending the response
+        //error on deleting site.js file??
+     //   deleteDir(productFileFolder);
+     //   deleteFile(newlyCreatedZipFile);
+
+    }
+
+
+} //end class
 
 

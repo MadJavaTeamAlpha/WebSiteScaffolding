@@ -43,7 +43,8 @@ Future group work
 	--Replace template files with most recent files
 	--incorporate the zip file process
 	--decide on delivery method of zip file
-
+	--javadoc
+	--clean up/modularize code
 
 Resource Links:
 http://commons.apache.org/proper/commons-io/download_io.cgi
