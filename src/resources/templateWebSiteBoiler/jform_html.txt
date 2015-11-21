@@ -1,0 +1,41 @@
+<form novalidate="novalidate" class="cmxform" id="signupForm" method="get" action="">
+	<fieldset>
+		<legend>Validating a complete form</legend>
+		<p>
+			<label for="firstname">Firstname</label>
+			<input id="firstname" name="firstname" type="text">
+		</p>
+		<p>
+			<label for="lastname">Lastname</label>
+			<input id="lastname" name="lastname" type="text">
+		</p>
+		<p>
+			<label for="username">Username</label>
+			<input id="username" name="username" type="text">
+		</p>
+		<p>
+			<label for="password">Password</label>
+			<input id="password" name="password" type="password">
+		</p>
+		<p>
+			<label for="confirm_password">Confirm password</label>
+			<input id="confirm_password" name="confirm_password" type="password">
+		</p>
+		<p>
+			<label for="email">Email</label>
+			<input id="email" name="email" type="email">
+		</p>
+		<p>
+			<label for="agree">Please agree to our policy</label>
+			<input class="checkbox" id="agree" name="agree" type="checkbox">
+		</p>
+		<p>
+			<label for="newsletter">I'd like to receive the newsletter</label>
+			<input class="checkbox" id="newsletter" name="newsletter" type="checkbox">
+		</p>
+
+		<p>
+			<input class="submit" value="Submit" type="submit">
+		</p>
+	</fieldset>
+</form>
