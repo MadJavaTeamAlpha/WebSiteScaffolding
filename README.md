@@ -37,4 +37,9 @@ Group work time in class
 
 
 Future group work
-11/20 @ 6pm Jon's workplace
+11/20 @ 8pm Skypen' it up
+
+
+Resource Links:
+http://commons.apache.org/proper/commons-io/download_io.cgi
+http://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html#copyDirectory%28java.io.File,%20java.io.File%29
