@@ -38,6 +38,11 @@ Group work time in class
 
 Future group work
 11/20 @ 8pm Skypen' it up
+* TODO: 
+	--index.html configuration
+	--Replace template files with most recent files
+	--incorporate the zip file process
+	--decide on delivery method of zip file
 
 
 Resource Links:
