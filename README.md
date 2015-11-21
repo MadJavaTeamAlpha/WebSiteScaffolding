@@ -49,3 +49,17 @@ Future group work
 Resource Links:
 http://commons.apache.org/proper/commons-io/download_io.cgi
 http://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html#copyDirectory%28java.io.File,%20java.io.File%29
+
+
+* Index Output
+    * open_head.txt
+    * {{ css queue }}
+    * close_head_open_body.txt
+    * a) foundation_open_html.txt
+    * b) bootstrap_open_html.txt
+    * hello_world_html.txt
+    * c) jform_html.txt
+    * a) foundation_close_html.txt
+    * b) bootstrap_close_html.html
+    * {{ js queue }}
+    * close_body.txt
