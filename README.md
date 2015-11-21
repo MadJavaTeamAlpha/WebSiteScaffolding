@@ -51,14 +51,14 @@ http://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUt
 
 
 * Index Output
-    -- open_head.txt
-    -- {{ css queue }}
-    -- close_head_open_body.txt
-    -- a) foundation_open_html.txt
-    -- b) bootstrap_open_html.txt
-    -- hello_world_html.txt
-    -- c) jform_html.txt
-    -- a) foundation_close_html.txt
-    -- b) bootstrap_close_html.html
-    -- {{ js queue }}
-    -- close_body.txt
+    * open_head.txt
+    * {{ css queue }}
+    * close_head_open_body.txt
+    * a) foundation_open_html.txt
+    * b) bootstrap_open_html.txt
+    * hello_world_html.txt
+    * c) jform_html.txt
+    * a) foundation_close_html.txt
+    * b) bootstrap_close_html.html
+    * {{ js queue }}
+    * close_body.txt
