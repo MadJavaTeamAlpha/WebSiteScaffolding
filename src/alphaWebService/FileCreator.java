@@ -1,10 +1,11 @@
 package alphaWebService;
 
+import org.apache.commons.io.FileUtils;
+
 import java.io.*;
+import java.util.*;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
-
-import org.apache.commons.io.*;
 
 /**
  * Created by Drakenstein on 11/16/2015.
@@ -16,8 +17,8 @@ public class FileCreator {
 
     //request params coming in from the URL query string; set here for development
     private String cssparam = "Y"; //"Y" or "N" or ""
-    private String frameworkparam = "foundation"; //"bootstrap" or "foundation"
-    private String scriptparam = "jForm"; //"js" or "jQuery" or "jForm"
+    private String frameworkparam = "bootstrap"; //"bootstrap" or "foundation"
+    private String scriptparam = "js"; //"js" or "jQuery" or "jForm"
 
     //make paths tbd
     //Path indexHTMLFilePath = Paths.get("./src/resources/index.html");
@@ -41,10 +42,57 @@ public class FileCreator {
     private File productAssetFileFolder = new File(productFolderString + "/assets");
     private String productZippedFolder = "./src/templateWebSiteProduct.zip";
 
+    //---product index.html
+    private File productIndexHTMLFile = new File(productFolderString + "/index.html");
+
+    //---product /js/site.js
+    private File productSiteJSFile = new File(productFolderString + "/js/site.js");
+
+    //---product /css/style.css
+    private File productSiteCSSStyle = new File(productFolderString + "/css/style.css");
 
 
-    public static void main(String[] args)
-    {
+    //---code segments: jQuery
+    private File segmentOnReadyOpen = new File(templateWebSiteBoilerString + "/segments/jquery_onready_open.txt");
+    private File segmentOnReadyClose = new File(templateWebSiteBoilerString + "/segments/jquery_onready_close.txt");
+
+
+    //---code segments: jQuery Validate
+    private File segmentValidateJS = new File(templateWebSiteBoilerString + "/segments/jquery_validate.txt");
+
+
+    //---code segments: CSS Nav Bar
+    private File segmentCSSNavStyle = new File(templateWebSiteBoilerString + "/segments/nav_style.txt");
+
+
+    // Queues
+
+    //---style queue
+    ArrayList<String> styleQueue = new ArrayList<>();
+
+    //---script queue
+    ArrayList<String> scriptQueue = new ArrayList<>();
+
+    // Site Style Reference
+    private File refStyleCss = new File(templateWebSiteBoilerString + "/segments/style_queue_style_css.txt");
+
+    // jQuery Reference
+    private File refJQueryJS = new File(templateWebSiteBoilerString + "/segments/script_queue_jquery.txt");
+
+    // Bootstrap References
+    private File refBootstrapCss = new File(templateWebSiteBoilerString + "/segments/style_queue_bootstrap.txt");
+    private File refBootstrapJS = new File(templateWebSiteBoilerString + "/segments/script_queue_bootstrap.txt");
+
+    // Foundation References
+    private File refFoundationCss = new File(templateWebSiteBoilerString + "/segments/style_queue_foundation.txt");
+    private File refFoundationJS = new File(templateWebSiteBoilerString + "/segments/script_queue_foundation.txt");
+
+    // jQuery Validate References
+    private File refJQueryValidateJS = new File(templateWebSiteBoilerString + "/segments/script_queue_jquery_validate.txt");
+
+
+
+    public static void main(String[] args) throws IOException {
         FileCreator fileCreator = new FileCreator();
         fileCreator.writeIndexHTML();
         fileCreator.interrogateParams();
@@ -54,19 +102,26 @@ public class FileCreator {
 
 
     //write a root file for the web site files
-    public void writeIndexHTML()
-    {
+    public void writeIndexHTML() throws IOException {
         makeDir(productFileFolder);
         copyFileToDir(indexHTMLFile, productFileFolder);
+
+
+
     }
 
-    public void interrogateParams()
-    {
+    public void interrogateParams() throws IOException {
         if (!cssparam.isEmpty() && cssparam.equals("Y"))
         {
-            copyDirToDir(cssFileFolder,productFileFolder);
-//TODO
-//          add to script queue
+            copyDirToDir(cssFileFolder, productFileFolder);
+
+            // add nav style to /css/style.css
+            printToFile(segmentCSSNavStyle, productSiteCSSStyle);
+
+            // add nav style reference to style queue
+            addToQueue(refStyleCss, styleQueue);
+
+
         } //end cssparam
 
 
@@ -92,18 +147,26 @@ public class FileCreator {
             if (boolBootstrap)
             {
                 //FYI in IntelliJ Project Window it might look like this: assets.bootstrap (= assets/bootstrap/)
-                copyDirToDir(bootstrapFileFolder,productAssetFileFolder);
-//TODO
-//                add bootstrap.js to script queue
-//                add bootstrap.css to style queue
+                copyDirToDir(bootstrapFileFolder, productAssetFileFolder);
+
+                // add bootstrap.css to style queue
+                addToQueue(refBootstrapCss, styleQueue);
+
+                // add bootstrap.js to script queue
+                addToQueue(refBootstrapJS, scriptQueue);
 
             }
             else if (boolFoundation)
             {
-                copyDirToDir(foundationFileFolder,productAssetFileFolder);
-//TODO
-//                add bootstrap.js to script queue
-//                add bootstrap.css to style queue
+                copyDirToDir(foundationFileFolder, productAssetFileFolder);
+
+                // add foundation.css to style queue
+                addToQueue(refFoundationCss, styleQueue);
+
+                // add foundation.js to script queue
+                addToQueue(refFoundationJS, scriptQueue);
+
+
             }
 
         } //end frameworkparam
@@ -139,10 +202,16 @@ public class FileCreator {
                 copyFileToDir(jQueryFile, productAssetFileFolder);
 
                 //add site.js to js directory
-                copyDirToDir(jsFileFolder,productFileFolder);
-//TODO
-//                write onReady open to site.js
-//                write onReady close to site.js
+                copyDirToDir(jsFileFolder, productFileFolder);
+
+                // write onReady open to site.js
+                printToFile(segmentOnReadyOpen, productSiteJSFile);
+
+                // write onReady close to site.js
+                printToFile(segmentOnReadyClose, productSiteJSFile);
+
+                // add jquery.js to script queue
+                addToQueue(refJQueryJS, scriptQueue);
 
             }
             else if (boolJForm)
@@ -151,14 +220,26 @@ public class FileCreator {
                 copyFileToDir(jQueryFile, productAssetFileFolder);
 
                 //add site.js to js directory
-                copyDirToDir(jsFileFolder,productFileFolder);
+                copyDirToDir(jsFileFolder, productFileFolder);
 
                 //add jQuery.validate to assets directory
-                copyDirToDir(jQueryValidationFileFolder,productAssetFileFolder);
-//TODO
-//                write onReady open to site.js
-//                write jQuery.validate instantiation to site.js
-//                write onReady close to site.js
+                copyDirToDir(jQueryValidationFileFolder, productAssetFileFolder);
+
+                // write onReady open to site.js
+                printToFile(segmentOnReadyOpen, productSiteJSFile);
+
+                // write jQuery.validate instantiation to site.js
+                printToFile(segmentValidateJS, productSiteJSFile);
+
+                // write onReady close to site.js
+                printToFile(segmentOnReadyClose, productSiteJSFile);
+
+                // add jquery.js to script queue
+                addToQueue(refJQueryJS, scriptQueue);
+
+                // add jquery.validate.js to script queue
+                addToQueue(refJQueryValidateJS, scriptQueue);
+
 
             }
         } //end scriptparam
@@ -216,6 +297,44 @@ Write close html
 
 
     } //end interrogateParams()
+
+
+    // Add to queue arraylists
+    public void addToQueue(File read, ArrayList<String> queue) throws IOException {
+
+        FileReader fr = new FileReader(read);
+        BufferedReader br = new BufferedReader(fr);
+        String out;
+        while((out = br.readLine()) != null) {
+            queue.add(out);
+        }
+        fr.close();
+
+
+    }
+
+
+    // Read file, print file
+    public void printToFile(File read, File write) throws IOException {
+
+        FileReader fr = new FileReader(read);
+        BufferedReader br = new BufferedReader(fr);
+        String out;
+        while((out = br.readLine()) != null) {
+            PrintWriter fw;
+            try {
+                fw = new PrintWriter(new FileOutputStream(write,true));
+                fw.write(String.format("%s",out));
+                fw.write(System.lineSeparator()); //new line
+                fw.close();
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        }
+        fr.close();
+
+
+    }
 
 
     public void copyFileToDir(File srcFile, File destDir)
