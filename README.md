@@ -63,3 +63,16 @@ http://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUt
     * b) bootstrap_close_html.html
     * {{ js queue }}
     * close_body.txt
+    
+11/22 
+* Added Two ArrayLists
+	* styleQueue
+	* scriptQueue
+	
+* Added addToQueue method
+	* pass method a file and an ArrayList - first the read file, second the queue ArrayList
+	* addToQueue(File read, ArrayList<String> queue)
+	
+* Added printToFile method
+	* pass method two files - first the read file, second the write file
+	* printToFile(File read, File write)
