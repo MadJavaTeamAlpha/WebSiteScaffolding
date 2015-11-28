@@ -76,3 +76,6 @@ http://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUt
 * Added printToFile method
 	* pass method two files - first the read file, second the write file
 	* printToFile(File read, File write)
+
+11/28
+* Added method to output index.html
