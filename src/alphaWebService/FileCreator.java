@@ -18,7 +18,14 @@ public class FileCreator {
     //request params coming in from the URL query string; set here for development
     private String cssparam = "Y"; //"Y" or "N" or ""
     private String frameworkparam = "bootstrap"; //"bootstrap" or "foundation"
-    private String scriptparam = "js"; //"js" or "jQuery" or "jForm"
+    private String scriptparam = "jForm"; //"js" or "jQuery" or "jForm"
+
+    private boolean boolBootstrap;
+    private boolean boolFoundation;
+
+    private boolean boolJS;
+    private boolean boolJQuery;
+    private boolean boolJForm;
 
     //make paths tbd
     //Path indexHTMLFilePath = Paths.get("./src/resources/index.html");
@@ -51,18 +58,36 @@ public class FileCreator {
     //---product /css/style.css
     private File productSiteCSSStyle = new File(productFolderString + "/css/style.css");
 
-
     //---code segments: jQuery
     private File segmentOnReadyOpen = new File(templateWebSiteBoilerString + "/segments/jquery_onready_open.txt");
     private File segmentOnReadyClose = new File(templateWebSiteBoilerString + "/segments/jquery_onready_close.txt");
 
-
     //---code segments: jQuery Validate
     private File segmentValidateJS = new File(templateWebSiteBoilerString + "/segments/jquery_validate.txt");
 
-
     //---code segments: CSS Nav Bar
     private File segmentCSSNavStyle = new File(templateWebSiteBoilerString + "/segments/nav_style.txt");
+
+    //--- code segment: Index.html
+    private File segmentOpenHead = new File(templateWebSiteBoilerString + "/segments/open_head.txt");
+    private File segmentNavOpen = new File(templateWebSiteBoilerString + "/segments/nav_open.txt");
+    private File segmentNavHtml = new File(templateWebSiteBoilerString + "/segments/nav_html.txt");
+    private File segmentNavClose = new File(templateWebSiteBoilerString + "/segments/nav_close.txt");
+
+    private File segmentCloseHeadOpenBody = new File(templateWebSiteBoilerString + "/segments/close_head_open_body.txt");
+
+    private File segmentHelloWorld = new File(templateWebSiteBoilerString + "/segments/hello_world_html.txt");
+
+    private File segmentFoundationOpen = new File(templateWebSiteBoilerString + "/segments/foundation_open_html.txt");
+    private File segmentFoundationClose = new File(templateWebSiteBoilerString + "/segments/foundation_close_html.txt");
+
+    private File segmentJForm = new File(templateWebSiteBoilerString + "/segments/jform_html.txt");
+
+    private File segmentBootstrapOpen = new File(templateWebSiteBoilerString + "/segments/bootstrap_open_html.txt");
+    private File segmentBootstrapClose = new File(templateWebSiteBoilerString + "/segments/bootstrap_close_html.txt");
+
+    private File segmentCloseBody = new File(templateWebSiteBoilerString + "/segments/close_body.txt");
+
 
 
     // Queues
@@ -75,6 +100,9 @@ public class FileCreator {
 
     // Site Style Reference
     private File refStyleCss = new File(templateWebSiteBoilerString + "/segments/style_queue_style_css.txt");
+
+    // Site Script Reference
+    private File refSiteJS = new File(templateWebSiteBoilerString + "/segments/script_queue_site_js.txt");
 
     // jQuery Reference
     private File refJQueryJS = new File(templateWebSiteBoilerString + "/segments/script_queue_jquery.txt");
@@ -94,8 +122,8 @@ public class FileCreator {
 
     public static void main(String[] args) throws IOException {
         FileCreator fileCreator = new FileCreator();
-        fileCreator.writeIndexHTML();
         fileCreator.interrogateParams();
+        fileCreator.writeIndexHTML();
         fileCreator.startZipping();
         fileCreator.sendToConsumer();
     }
@@ -103,9 +131,73 @@ public class FileCreator {
 
     //write a root file for the web site files
     public void writeIndexHTML() throws IOException {
+
         makeDir(productFileFolder);
+
         copyFileToDir(indexHTMLFile, productFileFolder);
 
+        /* Head */
+
+        printToFile(segmentOpenHead, productIndexHTMLFile);
+
+
+        printQueue(styleQueue, productIndexHTMLFile);
+
+
+        printToFile(segmentCloseHeadOpenBody, productIndexHTMLFile);
+
+        /* Nav */
+        printToFile(segmentNavOpen, productIndexHTMLFile);
+
+        if (boolBootstrap) {
+            printToFile(segmentBootstrapOpen, productIndexHTMLFile);
+        }
+
+        if (boolFoundation) {
+            printToFile(segmentFoundationOpen, productIndexHTMLFile);
+        }
+
+        printToFile(segmentNavHtml, productIndexHTMLFile);
+
+        if (boolBootstrap) {
+            printToFile(segmentBootstrapClose, productIndexHTMLFile);
+        }
+
+        if (boolFoundation) {
+            printToFile(segmentFoundationClose, productIndexHTMLFile);
+        }
+
+        printToFile(segmentNavClose, productIndexHTMLFile);
+
+        /* Content */
+        if (boolBootstrap) {
+            printToFile(segmentBootstrapOpen, productIndexHTMLFile);
+        }
+
+        if (boolFoundation) {
+            printToFile(segmentFoundationOpen, productIndexHTMLFile);
+        }
+
+        /* Hello World */
+        printToFile(segmentHelloWorld, productIndexHTMLFile);
+
+        /* JForm */
+        if (boolJForm) {
+            printToFile(segmentJForm, productIndexHTMLFile);
+        }
+
+        if (boolBootstrap) {
+            printToFile(segmentBootstrapClose, productIndexHTMLFile);
+        }
+
+        if (boolFoundation) {
+            printToFile(segmentFoundationClose, productIndexHTMLFile);
+        }
+
+        printQueue(scriptQueue, productIndexHTMLFile);
+
+
+        printToFile(segmentCloseBody, productIndexHTMLFile);
 
 
     }
@@ -128,8 +220,7 @@ public class FileCreator {
         if (!frameworkparam.isEmpty())
         {
             String key = frameworkparam; //"bootstrap" or "foundation"
-            boolean boolBootstrap = false;
-            boolean boolFoundation = false;
+
 
             switch (key)
             {
@@ -174,9 +265,7 @@ public class FileCreator {
         if (!scriptparam.isEmpty())
         {
             String key = scriptparam; //"js" or "jQuery" or "jForm"
-            boolean boolJS = false;
-            boolean boolJQuery = false;
-            boolean boolJForm = false;
+
 
             switch (key)
             {
@@ -195,6 +284,9 @@ public class FileCreator {
             {
                 copyDirToDir(jsFileFolder,productFileFolder);
 
+                // add site.js to script queue
+                addToQueue(refSiteJS, scriptQueue);
+
             }
             else if (boolJQuery)
             {
@@ -212,6 +304,10 @@ public class FileCreator {
 
                 // add jquery.js to script queue
                 addToQueue(refJQueryJS, scriptQueue);
+
+                // add site.js to script queue
+                addToQueue(refSiteJS, scriptQueue);
+
 
             }
             else if (boolJForm)
@@ -239,6 +335,10 @@ public class FileCreator {
 
                 // add jquery.validate.js to script queue
                 addToQueue(refJQueryValidateJS, scriptQueue);
+
+                // add site.js to script queue
+                addToQueue(refSiteJS, scriptQueue);
+
 
 
             }
@@ -311,6 +411,24 @@ Write close html
         fr.close();
 
 
+    }
+
+
+    // Read file, print file
+    public void printQueue(ArrayList<String> queue, File write) throws IOException {
+
+        for (String out : queue) {
+
+            PrintWriter fw;
+            try {
+                fw = new PrintWriter(new FileOutputStream(write, true));
+                fw.write(String.format("%s", out));
+                fw.write(System.lineSeparator()); //new line
+                fw.close();
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        }
     }
 
 
