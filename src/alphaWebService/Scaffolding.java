@@ -8,7 +8,9 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import java.io.IOException;
 /**
+ * The Scaffolding class
  * Created by Team Alpha on 11/10/2015.
+ * @author Jonathan Dedering
  */
 // The Java class will be hosted at the URI path "/scaffolding"
 @Path("/")
@@ -16,18 +18,27 @@ public class Scaffolding {
 
     //with url param
     // The Java method will process HTTP GET requests
+
+    /**
+     * The getMsg method creates an html file with the user's selections
+     * @param style is the css option selected by the user
+     * @param framework is the framework option selected by the user
+     * @param script are the javascript/jquery options selected by the user
+     * @return output a String that contains a short html message that states the options the user has selected
+     */
     @GET
     @Path("/{style}/{framework}/{script}")
     @Produces("text/html")
     public String getMsg(@PathParam("style") String style,@PathParam("framework") String framework,@PathParam("script") String script) {
         String output = "<html><body><p>Style: " + style + "</p> <p>Framework: " + framework + "</p> <p>Script: " + script + "</p></body></html>";
 
-
-
         return output;
     }
 
-
+    /**
+     * the method getClichedMessage returns a message if no parameters were passed in the url
+     * @return a String message that no parameters were passed
+     */
     //without url param
     // The Java method will process HTTP GET requests
     @GET
@@ -36,6 +47,11 @@ public class Scaffolding {
         return "No parameters were passed.";
     }
 
+    /**
+     * This is the main method and is the entrance point for the program
+     * @param args
+     * @throws IOException
+     */
     public static void main(String[] args) throws IOException {
         HttpServer server = HttpServerFactory.create("http://localhost:9998/");
         server.start();

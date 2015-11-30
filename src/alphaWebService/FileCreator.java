@@ -8,13 +8,22 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
 /**
+ * This class requests params from the URL query string and uses them to create a zipped directory folder for a
+ * basic website based on the user's selections
+ * It contains instance variables for each option available to the user
+ * It instantiates a number of file objects that represent different pieces of each file
+ *
  * Created by Drakenstein on 11/16/2015.
+ * @author Debbie Hafenstein
  */
 public class FileCreator {
 
 //    String line = "";
 //    Charset charset = StandardCharsets.UTF_8;
 
+    //---INSTANCE VARIABLES---//
+    //-- would it be weird to pull these instance variables and File object instantiations into a separate class that
+    //-- acts kind of like a bean?
     //request params coming in from the URL query string; set here for development
     private String cssparam = "Y"; //"Y" or "N" or ""
     private String frameworkparam = "bootstrap"; //"bootstrap" or "foundation"
@@ -32,7 +41,7 @@ public class FileCreator {
     //Path productFolderPath = Paths.get("./src/templateWebSiteProduct");
     // Path productIndexFilePath = Paths.get(productFolder + "/index.html");
 
-    //make files
+    //---INSTANTIATE AND CREATE BOILERPLATE FILES---//
     //---template boiler plate files
     private String templateWebSiteBoilerString = "./src/resources/templateWebSiteBoiler";
     private File indexHTMLFile = new File(templateWebSiteBoilerString + "/index.html");
@@ -43,7 +52,7 @@ public class FileCreator {
     private File jQueryFile = new File(templateWebSiteBoilerString + "/assets/jquery.js");
     private File jQueryValidationFileFolder = new File(templateWebSiteBoilerString + "/assets/jquery-validation");
 
-    //---product files to send to consumer
+    //---INSTANTIATE AND CREATE PRODUCT FILES FOR CONSUMER---//
     private String productFolderString = "./src/templateWebSiteProduct";
     private File productFileFolder = new File(productFolderString);
     private File productAssetFileFolder = new File(productFolderString + "/assets");
@@ -119,7 +128,12 @@ public class FileCreator {
     private File refJQueryValidateJS = new File(templateWebSiteBoilerString + "/segments/script_queue_jquery_validate.txt");
 
 
-
+    /**
+     * This is the main method for the FileCreator Program
+     * This method starts the process by creating a new fileCreator object and calling each of the action methods
+     * @param args
+     * @throws IOException
+     */
     public static void main(String[] args) throws IOException {
         FileCreator fileCreator = new FileCreator();
         fileCreator.interrogateParams();
@@ -129,6 +143,13 @@ public class FileCreator {
     }
 
 
+    /**
+     * The writeIndexHTML calls the appropriate methods and adds the appropriate objects as parameters
+     * to write each section of the Index.html file
+     * @throws IOException
+     */
+    //-------Can we refactor this method for easier testing?-----//
+    // maybe pull out Head, Nav, Content, and JForm sections into own methods?
     //write a root file for the web site files
     public void writeIndexHTML() throws IOException {
 
@@ -202,6 +223,14 @@ public class FileCreator {
 
     }
 
+    /**
+     * The interrogateParams method checks to see if there are user requests for each non-boilerplate option
+     * and adds the requested parameters/objects to the copyDirToDir, printToFile, and addToQueue methods
+     * @throws IOException
+     */
+    //-------Can we refactor this method for easier testing?-----//
+    // pull cssparam, frameworkparam, and scriptparam into their own methods?
+    // this section could maybe be it's own class?  ParamParser.java?
     public void interrogateParams() throws IOException {
         if (!cssparam.isEmpty() && cssparam.equals("Y"))
         {
@@ -367,9 +396,6 @@ write close body
 Write close html
 
 
-
-
-
     public void readFileOrFolderAndWriteToTemplateFolder()
     {
 
@@ -398,7 +424,12 @@ Write close html
 
     } //end interrogateParams()
 
-
+    /**
+     *  The addToQueue method adds a File object to an ArrayList
+     * @param read
+     * @param queue
+     * @throws IOException
+     */
     // Add to queue arraylists
     public void addToQueue(File read, ArrayList<String> queue) throws IOException {
 
@@ -522,12 +553,14 @@ Write close html
             e.printStackTrace();
         }
     }
+
+
 //TODO
     //configure index.html
 
 
 
-    /*
+    /**
      * This code was pulled from http://examples.javacodegeeks.com/core-java/util/zip/zipoutputstream/java-zip-file-example/
      *
      */
@@ -550,6 +583,13 @@ Write close html
         }
     }
 
+    /**
+     *
+     * @param zipOutputStream
+     * @param inputFile
+     * @param parentName
+     * @throws IOException
+     */
     public void zipFolder(ZipOutputStream zipOutputStream,File inputFile, String parentName)  throws IOException {
 
         String myname = parentName +inputFile.getName()+"\\";
@@ -568,6 +608,13 @@ Write close html
         zipOutputStream.closeEntry();
     }
 
+    /**
+     * The zipFile method
+     * @param inputFile
+     * @param parentName
+     * @param zipOutputStream
+     * @throws IOException
+     */
     public void zipFile(File inputFile,String parentName,ZipOutputStream zipOutputStream) throws IOException{
 
         // A ZipEntry represents a file entry in the zip archive
@@ -579,7 +626,7 @@ Write close html
         byte[] buf = new byte[1024];
         int bytesRead;
 
-        // Read the input file by chucks of 1024 bytes
+        // Read the input file by chunks of 1024 bytes
         // and write the read bytes to the zip stream
         while ((bytesRead = fileInputStream.read(buf)) > 0) {
             zipOutputStream.write(buf, 0, bytesRead);
@@ -591,6 +638,9 @@ Write close html
 
     }
 
+    /**
+     *
+     */
     public void sendToConsumer()
     {
         //send response of zip file

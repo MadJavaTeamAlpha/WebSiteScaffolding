@@ -2,28 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e759c99-1737-4f45-b899-a0a5ab65dbf2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/FileCreationTests.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/ScaffoldingClientTests.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/ScaffoldingTests.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/WebSiteScaffolding/alphaWebService/FileCreator.class" afterPath="$PROJECT_DIR$/out/production/WebSiteScaffolding/alphaWebService/FileCreator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/WebSiteScaffolding/alphaWebService/Scaffolding.class" afterPath="$PROJECT_DIR$/out/production/WebSiteScaffolding/alphaWebService/Scaffolding.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/WebSiteScaffolding/alphaWebService/ScaffoldingClient.class" afterPath="$PROJECT_DIR$/out/production/WebSiteScaffolding/alphaWebService/ScaffoldingClient.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/WebSiteScaffolding/templateWebSiteProduct.zip" afterPath="$PROJECT_DIR$/out/production/WebSiteScaffolding/templateWebSiteProduct.zip" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templateWebSiteProduct.zip" afterPath="$PROJECT_DIR$/src/templateWebSiteProduct.zip" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebSiteScaffolding.iml" afterPath="$PROJECT_DIR$/WebSiteScaffolding.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/WebSiteScaffolding/resources/templateWebSiteBoiler/segments/foundation_close_html.txt" afterPath="$PROJECT_DIR$/out/production/WebSiteScaffolding/resources/templateWebSiteBoiler/segments/foundation_close_html.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/WebSiteScaffolding/templateWebSiteBoiler/segments/foundation_close_html.txt" afterPath="$PROJECT_DIR$/out/production/WebSiteScaffolding/templateWebSiteBoiler/segments/foundation_close_html.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/WebSiteScaffolding/resources/templateWebSiteBoiler/segments/foundation_open_html.txt" afterPath="$PROJECT_DIR$/out/production/WebSiteScaffolding/resources/templateWebSiteBoiler/segments/foundation_open_html.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/WebSiteScaffolding/templateWebSiteBoiler/segments/foundation_open_html.txt" afterPath="$PROJECT_DIR$/out/production/WebSiteScaffolding/templateWebSiteBoiler/segments/foundation_open_html.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/WebSiteScaffolding/resources/templateWebSiteBoiler/segments/hello_world_html.txt" afterPath="$PROJECT_DIR$/out/production/WebSiteScaffolding/resources/templateWebSiteBoiler/segments/hello_world_html.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/WebSiteScaffolding/templateWebSiteBoiler/segments/hello_world_html.txt" afterPath="$PROJECT_DIR$/out/production/WebSiteScaffolding/templateWebSiteBoiler/segments/hello_world_html.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/WebSiteScaffolding/resources/templateWebSiteBoiler/index.html" afterPath="$PROJECT_DIR$/out/production/WebSiteScaffolding/resources/templateWebSiteBoiler/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/WebSiteScaffolding/templateWebSiteBoiler/index.html" afterPath="$PROJECT_DIR$/out/production/WebSiteScaffolding/templateWebSiteBoiler/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/WebSiteScaffolding/resources/templateWebSiteBoiler/segments/jform_html.txt" afterPath="$PROJECT_DIR$/out/production/WebSiteScaffolding/resources/templateWebSiteBoiler/segments/jform_html.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/WebSiteScaffolding/templateWebSiteBoiler/segments/jform_html.txt" afterPath="$PROJECT_DIR$/out/production/WebSiteScaffolding/templateWebSiteBoiler/segments/jform_html.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/WebSiteScaffolding/resources/templateWebSiteBoiler/segments/nav_html.txt" afterPath="$PROJECT_DIR$/out/production/WebSiteScaffolding/resources/templateWebSiteBoiler/segments/nav_html.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/WebSiteScaffolding/templateWebSiteBoiler/segments/nav_html.txt" afterPath="$PROJECT_DIR$/out/production/WebSiteScaffolding/templateWebSiteBoiler/segments/nav_html.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/alphaWebService/FileCreator.java" afterPath="$PROJECT_DIR$/src/alphaWebService/FileCreator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/alphaWebService/Scaffolding.java" afterPath="$PROJECT_DIR$/src/alphaWebService/Scaffolding.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/alphaWebService/ScaffoldingClient.java" afterPath="$PROJECT_DIR$/src/alphaWebService/ScaffoldingClient.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WebSiteScaffolding.iws" />
@@ -47,47 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ScaffoldingClient.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/alphaWebService/ScaffoldingClient.java">
+      <file leaf-file-name="FileCreator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/alphaWebService/FileCreator.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileCreationTests.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/FileCreationTests.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ScaffoldingTests.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/ScaffoldingTests.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ScaffoldingClientTests.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/ScaffoldingClientTests.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="41" />
+              <caret line="427" column="64" selection-start-line="427" selection-start-column="64" selection-end-line="427" selection-end-column="64" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -99,17 +46,20 @@
         <entry file="file://$PROJECT_DIR$/src/alphaWebService/Scaffolding.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
-              <folding />
+              <caret line="51" column="18" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
+              <folding>
+                <element signature="e#1676#1677#0" expanded="true" />
+                <element signature="e#1727#1728#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FileCreator.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/alphaWebService/FileCreator.java">
+      <file leaf-file-name="ScaffoldingClient.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/alphaWebService/ScaffoldingClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.5056498">
-              <caret line="76" column="23" selection-start-line="76" selection-start-column="23" selection-end-line="76" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.27114716">
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -139,12 +89,12 @@
       <list>
         <option value="$PROJECT_DIR$/src/example/HelloWorld.java" />
         <option value="$PROJECT_DIR$/src/alphaWebService/HelloWorld.java" />
-        <option value="$PROJECT_DIR$/src/alphaWebService/ScaffoldingClient.java" />
-        <option value="$PROJECT_DIR$/src/alphaWebService/Scaffolding.java" />
-        <option value="$PROJECT_DIR$/src/alphaWebService/FileCreator.java" />
         <option value="$PROJECT_DIR$/tests/ScaffoldingClientTests.java" />
         <option value="$PROJECT_DIR$/tests/ScaffoldingTests.java" />
         <option value="$PROJECT_DIR$/tests/FileCreationTests.java" />
+        <option value="$PROJECT_DIR$/src/alphaWebService/FileCreator.java" />
+        <option value="$PROJECT_DIR$/src/alphaWebService/Scaffolding.java" />
+        <option value="$PROJECT_DIR$/src/alphaWebService/ScaffoldingClient.java" />
       </list>
     </option>
   </component>
@@ -211,8 +161,8 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -245,6 +195,78 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebSiteScaffolding" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebSiteScaffolding" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebSiteScaffolding" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebSiteScaffolding" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templateWebSiteProduct" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebSiteScaffolding" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebSiteScaffolding" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templateWebSiteBoiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebSiteScaffolding" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebSiteScaffolding" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alphaWebService" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -263,6 +285,8 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="FullScreen" value="false" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -791,11 +815,12 @@
       <workItem from="1448076535701" duration="92000" />
       <workItem from="1448076932806" duration="320000" />
       <workItem from="1448864068288" duration="2171000" />
+      <workItem from="1448899548516" duration="5508000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44846000" />
+    <option name="totallyTimeSpent" value="50354000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
@@ -803,14 +828,13 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32857144" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19891892" sideWeight="0.51354164" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19805194" sideWeight="0.51354164" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19891892" sideWeight="0.48645833" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19891892" sideWeight="0.48645833" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2671875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -824,6 +848,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32857144" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -853,7 +878,37 @@
     <entry file="file://$PROJECT_DIR$/src/alphaWebService/ScaffoldingClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/FileCreationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/ScaffoldingTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/ScaffoldingClientTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -863,8 +918,11 @@
     <entry file="file://$PROJECT_DIR$/src/alphaWebService/Scaffolding.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="36" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
-          <folding />
+          <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+          <folding>
+            <element signature="e#1676#1677#0" expanded="true" />
+            <element signature="e#1727#1728#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -892,7 +950,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="42" column="36" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
-          <folding />
+          <folding>
+            <element signature="e#1676#1677#0" expanded="true" />
+            <element signature="e#1727#1728#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -920,7 +981,41 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="42" column="36" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
-          <folding />
+          <folding>
+            <element signature="e#1676#1677#0" expanded="true" />
+            <element signature="e#1727#1728#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/alphaWebService/FileCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/alphaWebService/ScaffoldingClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/alphaWebService/Scaffolding.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="42" column="36" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
+          <folding>
+            <element signature="e#1676#1677#0" expanded="true" />
+            <element signature="e#1727#1728#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -948,7 +1043,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#1676#1677#0" expanded="true" />
+            <element signature="e#1727#1728#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -976,7 +1074,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#1676#1677#0" expanded="true" />
+            <element signature="e#1727#1728#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -994,7 +1095,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#1676#1677#0" expanded="true" />
+            <element signature="e#1727#1728#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1019,16 +1123,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/alphaWebService/ScaffoldingClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/ScaffoldingTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1036,14 +1130,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/alphaWebService/Scaffolding.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1069,8 +1155,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/alphaWebService/FileCreator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.5056498">
-          <caret line="76" column="23" selection-start-line="76" selection-start-column="23" selection-end-line="76" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="427" column="64" selection-start-line="427" selection-start-column="64" selection-end-line="427" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/alphaWebService/Scaffolding.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="51" column="18" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
+          <folding>
+            <element signature="e#1676#1677#0" expanded="true" />
+            <element signature="e#1727#1728#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/alphaWebService/ScaffoldingClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27114716">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
