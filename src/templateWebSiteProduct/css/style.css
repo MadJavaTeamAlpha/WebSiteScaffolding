@@ -1,0 +1,11 @@
+nav {
+	background-color: #fafafa;
+}
+nav ul {
+	margin: 0;
+}
+nav li { 
+	list-style: none;
+	display: inline-block;
+	padding: 6px 14px 6px 0;
+}
