@@ -12,6 +12,10 @@ import java.util.zip.ZipOutputStream;
  */
 public class FileCreator {
 
+    File newlyCreatedZipFile;
+
+
+
 //    String line = "";
 //    Charset charset = StandardCharsets.UTF_8;
 
@@ -118,7 +122,7 @@ public class FileCreator {
     // jQuery Validate References
     private File refJQueryValidateJS = new File(templateWebSiteBoilerString + "/segments/script_queue_jquery_validate.txt");
 
-    public void run(String css, String framework, String jForm) throws IOException {
+    public File run(String css, String framework, String jForm) throws IOException {
 
         cssparam = css; //"Y" or "N" or ""
         frameworkparam = framework; //"bootstrap" or "foundation"
@@ -131,6 +135,9 @@ public class FileCreator {
         writeIndexHTML();
         startZipping();
         sendToConsumer();
+        return newlyCreatedZipFile;
+       // Scaffolding download = new Scaffolding();
+     //  download.fileDownload(newlyCreatedZipFile);
 
     }
 /*
@@ -609,7 +616,7 @@ Write close html
     public void sendToConsumer()
     {
         //send response of zip file
-        File newlyCreatedZipFile = new File(productZippedFolder);
+         newlyCreatedZipFile = new File(productZippedFolder);
 
 //TODO
         //some code here ?
