@@ -16,9 +16,9 @@ public class FileCreator {
 //    Charset charset = StandardCharsets.UTF_8;
 
     //request params coming in from the URL query string; set here for development
-    private String cssparam = "Y"; //"Y" or "N" or ""
-    private String frameworkparam = "bootstrap"; //"bootstrap" or "foundation"
-    private String scriptparam = "jForm"; //"js" or "jQuery" or "jForm"
+    private String cssparam = ""; //"Y" or "N" or ""
+    private String frameworkparam = ""; //"bootstrap" or "foundation"
+    private String scriptparam = ""; //"js" or "jQuery" or "jForm"
 
     private boolean boolBootstrap;
     private boolean boolFoundation;
@@ -118,16 +118,31 @@ public class FileCreator {
     // jQuery Validate References
     private File refJQueryValidateJS = new File(templateWebSiteBoilerString + "/segments/script_queue_jquery_validate.txt");
 
+    public void run(String css, String framework, String jForm) throws IOException {
 
+        cssparam = css; //"Y" or "N" or ""
+        frameworkparam = framework; //"bootstrap" or "foundation"
+        scriptparam = jForm; //"js" or "jQuery" or "jForm"
+        System.out.println(cssparam + " " + frameworkparam + " " + scriptparam);
 
+       // FileCreator fileCreator = new FileCreator();
+
+        interrogateParams();
+        writeIndexHTML();
+        startZipping();
+        sendToConsumer();
+
+    }
+/*
     public static void main(String[] args) throws IOException {
+
         FileCreator fileCreator = new FileCreator();
         fileCreator.interrogateParams();
         fileCreator.writeIndexHTML();
         fileCreator.startZipping();
         fileCreator.sendToConsumer();
     }
-
+*/
 
     //write a root file for the web site files
     public void writeIndexHTML() throws IOException {
@@ -602,8 +617,8 @@ Write close html
 
         //delete the files in project after sending the response
         //error on deleting site.js file??
-     //   deleteDir(productFileFolder);
-     //   deleteFile(newlyCreatedZipFile);
+//        deleteDir(productFileFolder);
+//        deleteFile(newlyCreatedZipFile);
 
     }
 
