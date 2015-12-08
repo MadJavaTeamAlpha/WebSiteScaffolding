@@ -6,7 +6,10 @@ import java.net.URL;
 import java.net.URLEncoder;
 
 /**
+ * The ScaffoldingClient class sets the url variable for the program and creates an HttpConnection, a URLCOnnection, and
+ * sets a request property and the appropriate charset
  * Created by TeamAlpha on 11/10/2015.
+ * @author Jonathan Dedering
  */
 public class ScaffoldingClient {
 

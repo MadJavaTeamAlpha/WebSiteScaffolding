@@ -79,3 +79,9 @@ http://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUt
 
 11/28
 * Added method to output index.html
+
+11/29
+* Added test files
+
+11/30
+* Added javadoc
