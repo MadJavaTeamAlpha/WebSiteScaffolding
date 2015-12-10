@@ -50,6 +50,7 @@ public class Scaffolding extends HttpServlet {
      * the method getClichedMessage returns a message if no parameters were passed in the url
      * @return a String message that no parameters were passed
      */
+
     //without url param
     // The Java method will process HTTP GET requests
     @GET
@@ -90,11 +91,11 @@ public class Scaffolding extends HttpServlet {
      * @throws IOException
      */
     public static void main(String[] args) throws IOException {
-        HttpServer server = HttpServerFactory.create("http://localhost:9998/");
+        HttpServer server = HttpServerFactory.create("http://localhost:8080/");
         server.start();
 
         System.out.println("Server running");
-        System.out.println("Visit: http://localhost:9998/");
+        System.out.println("Visit: http://localhost:8080/");
         System.out.println("Paths: /{style}/{framework}/{script}");
         System.out.println("Hit return to stop...");
         System.in.read();

@@ -14,8 +14,6 @@ public class FileCreator {
 
     File newlyCreatedZipFile;
 
-
-
 //    String line = "";
 //    Charset charset = StandardCharsets.UTF_8;
 
