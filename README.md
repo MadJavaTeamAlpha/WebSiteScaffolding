@@ -1,3 +1,21 @@
+In order to run this program you must install wget.
+
+
+After running the application in intelliJ, enter the following on the command line:
+
+* wget -r --no-parent "http://localhost:9998/css/framework/script" -O outputFile.zip
+
+* Where css is the parameter for whether or not you'd like a basic css file with your scaffold.
+** choose 'Y' or 'N' or leave blank
+* Where framework is which reponsive framework you like included with your scaffold
+** choose 'bootstrap' or 'foundation' or leave blank
+* Where script is any scripting files you'd like with your scaffold,
+** choose 'js', 'jQuery', 'jForm', or leave blank
+* Where outputFile.zip is the name you'd like to give to your zipped folder
+** choose anything you'd like.
+
+example:  wget -r --no-parent "http://localhost:9998/Y/bootstrap/jForm" -O myFolder.zip
+
 
 It's working now.  
 Run the main method of scaffolding.java and try this url in the browser:
