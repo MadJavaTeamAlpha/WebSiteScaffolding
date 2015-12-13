@@ -12,7 +12,7 @@ import java.net.URLEncoder;
  * @author Jonathan Dedering
  */
 public class ScaffoldingClient {
-
+/*
   private final static String URL = "http://localhost:9998/scaffolding";
 
   public static void main(String[] argv) throws IOException {
@@ -38,6 +38,6 @@ public class ScaffoldingClient {
     {
       System.err.println ("error!");
     }
-  }
+  }*/
 }
 
