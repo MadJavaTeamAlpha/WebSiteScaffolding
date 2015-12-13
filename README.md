@@ -85,3 +85,9 @@ http://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUt
 
 11/30
 * Added javadoc
+
+12/12
+* Refactored most of it and troubleshooting multiple lib/pkg/permission problems
+
+12/13
+* Finished refactoring pushed working code
