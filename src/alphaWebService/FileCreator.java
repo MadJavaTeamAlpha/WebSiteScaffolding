@@ -44,6 +44,7 @@ public class FileCreator {
         // FileCreator fileCreator = new FileCreator();
         InterrogateParams newInterrogation = new InterrogateParams();
         newInterrogation.interrogateParams(css, framework, script);
+        newInterrogation.writeIndexHTML();
 
         startZipping();
         sendToConsumer();
@@ -81,7 +82,7 @@ public class FileCreator {
 
     public void zipFolder(ZipOutputStream zipOutputStream,File inputFile, String parentName)  throws IOException {
 
-        String myname = parentName +inputFile.getName()+"\\";
+        String myname = parentName + inputFile.getName()+"\\";
 
         ZipEntry folderZipEntry = new ZipEntry(myname);
         zipOutputStream.putNextEntry(folderZipEntry);

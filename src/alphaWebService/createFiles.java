@@ -29,6 +29,7 @@ public class createFiles {
 
         //---product index.html
         private File productIndexHTMLFile;
+
         //---product /js/site.js
         private File productSiteJSFile;
 
