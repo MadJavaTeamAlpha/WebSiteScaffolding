@@ -6,11 +6,11 @@ After running the application in intelliJ, enter the following on the command li
 * wget -r --no-parent "http://localhost:9998/css/framework/script" -O outputFile.zip
 
 * Where css is the parameter for whether or not you'd like a basic css file with your scaffold.
-** choose 'Y' or 'N' or leave blank
+** choose 'Y' or 'N' or 'null'
 * Where framework is which reponsive framework you like included with your scaffold
-** choose 'bootstrap' or 'foundation' or leave blank
+** choose 'bootstrap' or 'foundation' or 'null'
 * Where script is any scripting files you'd like with your scaffold,
-** choose 'js', 'jQuery', 'jForm', or leave blank
+** choose 'js', 'jQuery', 'jForm', or 'null'
 * Where outputFile.zip is the name you'd like to give to your zipped folder
 ** choose anything you'd like.
 
