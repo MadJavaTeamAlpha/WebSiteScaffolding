@@ -188,6 +188,7 @@ public class createFiles {
         }
 
         public File getProductFileFolder() {
+            productFolderString = "./src/templateWebSiteProduct";
             productFileFolder = new File(productFolderString);
             return productFileFolder;
         }

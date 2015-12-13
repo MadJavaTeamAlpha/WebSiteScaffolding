@@ -1,6 +1,5 @@
 package alphaWebService;
 
-import org.apache.commons.io.FileUtils;
 
 import java.io.*;
 import java.util.*;
@@ -60,7 +59,7 @@ public class FileCreator {
      */
     public void startZipping() {
         File productFileFolder = newCreateFile.getProductFileFolder();
-        File productZippedFolder = newCreateFile.getProductFileFolder();
+        String productZippedFolder = newCreateFile.getProductZippedFolder();
 
         try {
             FileOutputStream fileOutputStream = null;
