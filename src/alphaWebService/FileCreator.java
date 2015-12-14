@@ -2,7 +2,6 @@ package alphaWebService;
 
 
 import java.io.*;
-import java.util.*;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
@@ -17,8 +16,8 @@ import java.util.zip.ZipOutputStream;
  */
 public class FileCreator {
 
-    processFiles newProcessFile = new processFiles();
-    createFiles newCreateFile = new createFiles();
+    ProcessFiles newProcessFile = new ProcessFiles();
+    CreateFiles newCreateFile = new CreateFiles();
     File newlyCreatedZipFile;
 
     // ---  CREATE PROCESSING QUEUES---//
@@ -126,14 +125,6 @@ public class FileCreator {
         //send response of zip file
         newlyCreatedZipFile = new File(productZippedFolder);
 
-//TODO
-        //some code here ?
-
-
-        //delete the files in project after sending the response
-        //error on deleting site.js file??
-//        deleteDir(productFileFolder);
-//        deleteFile(newlyCreatedZipFile);
 
     }
 

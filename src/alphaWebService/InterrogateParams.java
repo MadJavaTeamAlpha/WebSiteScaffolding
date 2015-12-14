@@ -9,18 +9,11 @@ import java.util.*;
  */
 public class InterrogateParams {
 
-    processFiles newProcessFile = new processFiles();
-    createFiles newCreateFiles = new createFiles();
+    private final ProcessFiles newProcessFile = new ProcessFiles();
+    private final CreateFiles newCreateFiles = new CreateFiles();
 
-    private File productIndexHTMLFile = newCreateFiles.getProductIndexHTMLFile();
+    private final File productIndexHTMLFile = newCreateFiles.getProductIndexHTMLFile();
 
-    //---INSTANCE VARIABLES---//
-    //-- would it be weird to pull these instance variables and File object instantiations into a separate class that
-    //-- acts kind of like a bean?
-    //request params coming in from the URL query string; set here for development
-    private String cssparam = ""; //"Y" or "N" or ""
-    private String frameworkparam = ""; //"bootstrap" or "foundation"
-    private String scriptparam = ""; //"js" or "jQuery" or "jForm"
     //---INSTANCE VARIABLES---//
 
     private boolean boolBootstrap;
@@ -31,10 +24,10 @@ public class InterrogateParams {
     private boolean boolJForm;
 
     //---style queue
-    ArrayList<String> styleQueue = new ArrayList<String>();
+    private final ArrayList<String> styleQueue = new ArrayList<>();
 
     //---script queue
-    ArrayList<String> scriptQueue = new ArrayList<String>();
+    private final ArrayList<String> scriptQueue = new ArrayList<>();
 
     /**
      * The interrogateParams method checks to see if there are user requests for each non-boilerplate option
@@ -59,8 +52,7 @@ public class InterrogateParams {
         File productFileFolder = new File(productFolderString);
 
 
-
-        cssparam = css;
+        String cssparam = css;
 
         if (!cssparam.isEmpty() && cssparam.equals("Y"))
         {
@@ -86,7 +78,7 @@ public class InterrogateParams {
         File refFoundationCss = newCreateFiles.getRefFoundationCss();
         File refFoundationJS = newCreateFiles.getRefFoundationJS();
 
-        frameworkparam = framework;
+        String frameworkparam = framework;
 
         if (!frameworkparam.isEmpty())
         {
@@ -148,7 +140,7 @@ public class InterrogateParams {
         File segmentValidateJS = newCreateFiles.getSegmentValidateJS();
         File refJQueryValidateJS = newCreateFiles.getRefJQueryValidateJS();
 
-        scriptparam = jForm;
+        String scriptparam = jForm;
 
         if (!scriptparam.isEmpty())
         {

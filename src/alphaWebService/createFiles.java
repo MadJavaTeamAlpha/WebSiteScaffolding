@@ -5,7 +5,7 @@ import java.io.File;
 /**
  * Created by sschwert on 12/12/2015.
  */
-public class createFiles {
+public class CreateFiles {
 
         //------------INSTANCE VARIABLES---------//
 

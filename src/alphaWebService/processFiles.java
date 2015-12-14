@@ -8,7 +8,7 @@ import java.util.ArrayList;
 /**
  * Created by sschwert on 12/12/2015.
  */
-public class processFiles {
+public class ProcessFiles {
 
 
 
