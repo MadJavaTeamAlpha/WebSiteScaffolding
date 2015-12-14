@@ -9,12 +9,11 @@ import java.util.*;
  */
 public class InterrogateParams {
 
+    //---INSTANCE VARIABLES---//
     private final ProcessFiles newProcessFile = new ProcessFiles();
     private final CreateFiles newCreateFiles = new CreateFiles();
 
     private final File productIndexHTMLFile = newCreateFiles.getProductIndexHTMLFile();
-
-    //---INSTANCE VARIABLES---//
 
     private boolean boolBootstrap;
     private boolean boolFoundation;
@@ -34,14 +33,17 @@ public class InterrogateParams {
      * and adds the requested parameters/objects to the copyDirToDir, printToFile, and addToQueue methods
      * @throws IOException
      */
-
     public void interrogateParams(String css, String framework, String script) throws IOException {
         interrogateCSSParams(css);
         interrogateFrameworkParams(framework);
         interrogateScriptParams(script);
     } //end interrogateParams()
 
-
+    /**
+     *
+     * @param css
+     * @throws IOException
+     */
     private void interrogateCSSParams(String css) throws IOException {
         File cssFileFolder = newCreateFiles.getCssFileFolder();
         File segmentCSSNavStyle = newCreateFiles.getSegmentCSSNavStyle();
@@ -68,6 +70,10 @@ public class InterrogateParams {
     }
 
 
+    /**
+     * @param framework
+     * @throws IOException
+     */
     private void interrogateFrameworkParams(String framework) throws IOException {
 
         File productAssetFileFolder = newCreateFiles.getProductAssetFileFolder();
@@ -124,7 +130,11 @@ public class InterrogateParams {
         } //end frameworkparam
     }
 
-
+    /**
+     *
+     * @param jForm
+     * @throws IOException
+     */
     private void interrogateScriptParams(String jForm) throws IOException {
 
         File jsFileFolder = newCreateFiles.getJsFileFolder();
@@ -255,7 +265,10 @@ public class InterrogateParams {
     }
 
 
-
+    /**
+     *
+     * @throws IOException
+     */
     private void writeHeadIndexHtml() throws IOException {
         File segmentOpenHead = newCreateFiles.getSegmentOpenHead();
         File segmentCloseHeadOpenBody = newCreateFiles.getSegmentCloseHeadOpenBody();
@@ -266,6 +279,10 @@ public class InterrogateParams {
         newProcessFile.printToFile(segmentCloseHeadOpenBody, productIndexHTMLFile);
     }
 
+    /**
+     *
+     * @throws IOException
+     */
     private void writeNavIndexHtml() throws IOException {
         File segmentNavOpen = newCreateFiles.getSegmentNavOpen();
         File segmentNavHtml = newCreateFiles.getSegmentNavHtml();
@@ -283,6 +300,11 @@ public class InterrogateParams {
         newProcessFile.printToFile(segmentNavClose, productIndexHTMLFile);
     }
 
+
+    /**
+     *
+     * @throws IOException
+     */
     private void writeJFormIndexHtml() throws IOException {
         File segmentJForm = newCreateFiles.getSegmentJForm();
 
@@ -294,6 +316,11 @@ public class InterrogateParams {
         writeContentIndexHtmlClose();
     }
 
+
+    /**
+     *
+     * @throws IOException
+     */
     private void writeContentIndexHtmlOpen() throws IOException {
         File segmentBootstrapOpen = newCreateFiles.getSegmentBootstrapOpen();
         File segmentFoundationOpen = newCreateFiles.getSegmentFoundationOpen();
@@ -308,6 +335,10 @@ public class InterrogateParams {
         }
     }
 
+    /**
+     *
+     * @throws IOException
+     */
     private void writeContentIndexHtmlClose() throws IOException {
         File segmentBootstrapClose = newCreateFiles.getSegmentBootstrapClose();
         File segmentFoundationClose = newCreateFiles.getSegmentFoundationClose();

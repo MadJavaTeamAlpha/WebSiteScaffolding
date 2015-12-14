@@ -10,9 +10,12 @@ import java.util.ArrayList;
  */
 public class ProcessFiles {
 
-
-
-    // Add to queue arraylists
+    /**
+     *
+     * @param read
+     * @param queue
+     * @throws IOException
+     */
     public void addToQueue(File read, ArrayList<String> queue) throws IOException {
 
         FileReader fr = new FileReader(read);
@@ -26,6 +29,13 @@ public class ProcessFiles {
     }
 
     // Read file, print file
+
+    /**
+     *
+     * @param queue
+     * @param write
+     * @throws IOException
+     */
     public void printQueue(ArrayList<String> queue, File write) throws IOException {
 
         for (String out : queue) {
@@ -43,6 +53,13 @@ public class ProcessFiles {
     }
 
     // Read file, print file
+
+    /**
+     *
+     * @param read
+     * @param write
+     * @throws IOException
+     */
     public void printToFile(File read, File write) throws IOException {
 
         FileReader fr = new FileReader(read);
@@ -64,7 +81,11 @@ public class ProcessFiles {
 
     }
 
-
+    /**
+     *
+     * @param srcFile
+     * @param destDir
+     */
     public void copyFileToDir(File srcFile, File destDir)
     {
         try
@@ -81,6 +102,11 @@ public class ProcessFiles {
         }
     }
 
+    /**
+     *
+     * @param srcDir
+     * @param destDir
+     */
     public void copyDirToDir(File srcDir, File destDir)
     {
         try
@@ -97,6 +123,10 @@ public class ProcessFiles {
         }
     }
 
+    /**
+     *
+     * @param dir
+     */
     public void makeDir(File dir)
     {
         try
@@ -109,6 +139,10 @@ public class ProcessFiles {
         }
     }
 
+    /**
+     *
+     * @param dir
+     */
     public void deleteDir(File dir)
     {
         try
@@ -121,6 +155,10 @@ public class ProcessFiles {
         }
     }
 
+    /**
+     *
+     * @param file
+     */
     public void deleteFile(File file)
     {
         try

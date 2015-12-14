@@ -8,7 +8,6 @@ import java.io.File;
 public class CreateFiles {
 
         //------------INSTANCE VARIABLES---------//
-
         private File cssFileFolder;
         private File segmentCSSNavStyle;
         private File productSiteCSSStyle;
@@ -432,98 +431,6 @@ public class CreateFiles {
             this.refJQueryValidateJS = refJQueryValidateJS;
         }
 
-
-
-
-
-    /*
-    //---template boiler plate files
-    private String templateWebSiteBoilerString = "./src/resources/templateWebSiteBoiler";
-    private File indexHTMLFile = new File(templateWebSiteBoilerString + "/index.html");
-
-    private File bootstrapFileFolder = new File(templateWebSiteBoilerString + "/assets/bootstrap");
-    private File foundationFileFolder = new File(templateWebSiteBoilerString + "/assets/foundation");
-    private File jsFileFolder = new File(templateWebSiteBoilerString + "/js");
-    private File jQueryFile = new File(templateWebSiteBoilerString + "/assets/jquery.js");
-    private File jQueryValidationFileFolder = new File(templateWebSiteBoilerString + "/assets/jquery-validation");
-
-    //---INSTANTIATE AND CREATE PRODUCT FILES FOR CONSUMER---//
-    private String productFolderString = "./src/templateWebSiteProduct";
-    File productFileFolder = new File(productFolderString);
-    private File productAssetFileFolder = new File(productFolderString + "/assets");
-    private String productZippedFolder = "./src/templateWebSiteProduct.zip";
-
-    //---product index.html
-    private File productIndexHTMLFile = new File(productFolderString + "/index.html");
-
-    //---product /js/site.js
-    private File productSiteJSFile = new File(productFolderString + "/js/site.js");
-
-
-    //---code segments: jQuery
-    private File segmentOnReadyOpen = new File(templateWebSiteBoilerString + "/segments/jquery_onready_open.txt");
-    private File segmentOnReadyClose = new File(templateWebSiteBoilerString + "/segments/jquery_onready_close.txt");
-
-    //---code segments: jQuery Validate
-    private File segmentValidateJS = new File(templateWebSiteBoilerString + "/segments/jquery_validate.txt");
-
-
-    //--- code segment: Index.html
-    private File segmentOpenHead = new File(templateWebSiteBoilerString + "/segments/open_head.txt");
-    private File segmentNavOpen = new File(templateWebSiteBoilerString + "/segments/nav_open.txt");
-    private File segmentNavHtml = new File(templateWebSiteBoilerString + "/segments/nav_html.txt");
-    private File segmentNavClose = new File(templateWebSiteBoilerString + "/segments/nav_close.txt");
-
-    private File segmentCloseHeadOpenBody = new File(templateWebSiteBoilerString + "/segments/close_head_open_body.txt");
-
-    private File segmentHelloWorld = new File(templateWebSiteBoilerString + "/segments/hello_world_html.txt");
-
-    private File segmentFoundationOpen = new File(templateWebSiteBoilerString + "/segments/foundation_open_html.txt");
-    private File segmentFoundationClose = new File(templateWebSiteBoilerString + "/segments/foundation_close_html.txt");
-
-    private File segmentJForm = new File(templateWebSiteBoilerString + "/segments/jform_html.txt");
-
-    private File segmentBootstrapOpen = new File(templateWebSiteBoilerString + "/segments/bootstrap_open_html.txt");
-    private File segmentBootstrapClose = new File(templateWebSiteBoilerString + "/segments/bootstrap_close_html.txt");
-
-    private File segmentCloseBody = new File(templateWebSiteBoilerString + "/segments/close_body.txt");
-
-
-
-    // Site Script Reference
-    private File refSiteJS = new File(templateWebSiteBoilerString + "/segments/script_queue_site_js.txt");
-
-    // jQuery Reference
-    private File refJQueryJS = new File(templateWebSiteBoilerString + "/segments/script_queue_jquery.txt");
-
-    // Bootstrap References
-    private File refBootstrapCss = new File(templateWebSiteBoilerString + "/segments/style_queue_bootstrap.txt");
-    private File refBootstrapJS = new File(templateWebSiteBoilerString + "/segments/script_queue_bootstrap.txt");
-
-    // Foundation References
-    private File refFoundationCss = new File(templateWebSiteBoilerString + "/segments/style_queue_foundation.txt");
-    private File refFoundationJS = new File(templateWebSiteBoilerString + "/segments/script_queue_foundation.txt");
-
-    // jQuery Validate References
-    private File refJQueryValidateJS = new File(templateWebSiteBoilerString + "/segments/script_queue_jquery_validate.txt");
-
-
-    public void createCSSFiles() {
-
-        cssFileFolder = new File(templateWebSiteBoilerString + "/css");
-
-        //---code segments: CSS Nav Bar
-        segmentCSSNavStyle = new File(templateWebSiteBoilerString + "/segments/nav_style.txt");
-
-        //---product /css/style.css
-        productSiteCSSStyle = new File(productFolderString + "/css/style.css");
-
-
-        // Site Style Reference
-        refStyleCSS = new File(templateWebSiteBoilerString + "/segments/style_queue_style_css.txt");
-
-    }
-*/
 }
 
 

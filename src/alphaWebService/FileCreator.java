@@ -16,17 +16,19 @@ import java.util.zip.ZipOutputStream;
  */
 public class FileCreator {
 
+    //---INSTANCE VARIABLES---//
     ProcessFiles newProcessFile = new ProcessFiles();
     CreateFiles newCreateFile = new CreateFiles();
     File newlyCreatedZipFile;
 
-    // ---  CREATE PROCESSING QUEUES---//
-
-
-
 
     /**
      * The run method calls all of the action methods and is called by the main method
+     * @param css
+     * @param framework
+     * @param script
+     * @return
+     * @throws IOException
      */
     public File run(String css, String framework, String script) throws IOException {
 
@@ -53,7 +55,7 @@ public class FileCreator {
 
 
 
-    /*
+    /**
      * This code was pulled from http://examples.javacodegeeks.com/core-java/util/zip/zipoutputstream/java-zip-file-example/
      *
      */
@@ -79,6 +81,13 @@ public class FileCreator {
         }
     }
 
+    /**
+     *
+     * @param zipOutputStream
+     * @param inputFile
+     * @param parentName
+     * @throws IOException
+     */
     public void zipFolder(ZipOutputStream zipOutputStream,File inputFile, String parentName)  throws IOException {
 
         String myname = parentName + inputFile.getName()+"\\";
@@ -97,6 +106,13 @@ public class FileCreator {
         zipOutputStream.closeEntry();
     }
 
+    /**
+     *
+     * @param inputFile
+     * @param parentName
+     * @param zipOutputStream
+     * @throws IOException
+     */
     public void zipFile(File inputFile,String parentName,ZipOutputStream zipOutputStream) throws IOException{
 
         // A ZipEntry represents a file entry in the zip archive
@@ -120,6 +136,9 @@ public class FileCreator {
 
     }
 
+    /**
+     *
+     */
     public void sendToConsumer() {
         String productZippedFolder = newCreateFile.getProductZippedFolder();
         //send response of zip file
