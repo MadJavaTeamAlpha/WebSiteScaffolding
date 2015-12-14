@@ -37,8 +37,7 @@ public class FileCreator {
 
         cssparam = css; //"Y" or "N" or ""
         frameworkparam = framework; //"bootstrap" or "foundation"
-        scriptparam = script; //"js" or "jQuery" or "jForm"
-        System.out.println(cssparam + " " + frameworkparam + " " + scriptparam);
+        scriptparam = script; //"js" or "jQuery" or "jForm"s
 
         // FileCreator fileCreator = new FileCreator();
         InterrogateParams newInterrogation = new InterrogateParams();
@@ -48,6 +47,7 @@ public class FileCreator {
         startZipping();
         sendToConsumer();
         return newlyCreatedZipFile;
+
 
     }
 
