@@ -29,8 +29,8 @@ public class InterrogateParams {
     private final ArrayList<String> scriptQueue = new ArrayList<>();
 
     /**
-     * The interrogateParams method checks to see if there are user requests for each non-boilerplate option
-     * and adds the requested parameters/objects to the copyDirToDir, printToFile, and addToQueue methods
+     * The interrogateParams method calls the interrogation sub-methods which check to see if there are user requests
+     * for each non-boilerplate option and adds the requested parameters/objects to
      * @throws IOException
      */
     public void interrogateParams(String css, String framework, String script) throws IOException {
