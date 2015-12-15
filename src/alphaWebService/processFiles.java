@@ -11,9 +11,11 @@ import java.util.ArrayList;
 public class ProcessFiles {
 
     /**
-     *
-     * @param read
-     * @param queue
+     * The ProcessFiles class houses the methods that will process the files, add them to a queue and print them
+     * It does not create any of the files.  These methods are all called by the InterrogateParams method after it has
+     * detemined which files should be processed based on the user input
+     * @param read is a file to be read
+     * @param queue is an arraylist of strings representing the content of many files
      * @throws IOException
      */
     public void addToQueue(File read, ArrayList<String> queue) throws IOException {
@@ -31,9 +33,9 @@ public class ProcessFiles {
     // Read file, print file
 
     /**
-     *
-     * @param queue
-     * @param write
+     * this method reads a queue and then writes a file from strings in the queue
+     * @param queue is an arraylist of strings representing the content of many files
+     * @param write is a file ready to be written to the new directory structure
      * @throws IOException
      */
     public void printQueue(ArrayList<String> queue, File write) throws IOException {
@@ -55,9 +57,9 @@ public class ProcessFiles {
     // Read file, print file
 
     /**
-     *
-     * @param read
-     * @param write
+     * this method reads an existing file and then prints a new file
+     * @param read is the file in
+     * @param write is the file out
      * @throws IOException
      */
     public void printToFile(File read, File write) throws IOException {
@@ -82,9 +84,9 @@ public class ProcessFiles {
     }
 
     /**
-     *
-     * @param srcFile
-     * @param destDir
+     * this file copies and existing file to a new directory
+     * @param srcFile this takes the written file, copies it, and puts it in the created directory
+     * @param destDir this is the directory that is created that accepts the file
      */
     public void copyFileToDir(File srcFile, File destDir)
     {
@@ -103,9 +105,9 @@ public class ProcessFiles {
     }
 
     /**
-     *
-     * @param srcDir
-     * @param destDir
+     * this method copies an existing directory to a new directory
+     * @param srcDir this is the original directory that will be copied
+     * @param destDir this is the destination directory that the srcDir is copied to
      */
     public void copyDirToDir(File srcDir, File destDir)
     {
@@ -124,8 +126,8 @@ public class ProcessFiles {
     }
 
     /**
-     *
-     * @param dir
+     * this method makes a new directory
+     * @param dir is a file that represents the directory to be made
      */
     public void makeDir(File dir)
     {
@@ -140,8 +142,8 @@ public class ProcessFiles {
     }
 
     /**
-     *
-     * @param dir
+     * this method can delete a directory if we need it to, but is not currently used
+     * @param dir is the directory to be deleted
      */
     public void deleteDir(File dir)
     {
@@ -156,8 +158,8 @@ public class ProcessFiles {
     }
 
     /**
-     *
-     * @param file
+     * this method can delete a file if we need it to, but is not currently used
+     * @param file is the file to be deleted
      */
     public void deleteFile(File file)
     {

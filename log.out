@@ -1,0 +1,67 @@
+in the getMsg method
+we're in the interrogateParams method
+we're in the interrogateCSSParams method
+we're checking to see if the cssParam is empty and whether they chose Y
+we're in the interrogateFrameworkParams method
+we're checking to see if the framework param is empty
+we're checking to see if they chose foundation
+we're in the interrogateScriptParams method
+we're in the writeIndexHTML method
+we're in the writeHeadIndexHtml method
+we're in the writeNavIndexHtml method
+we're in the writeContentIndexHtmlOpen method
+we're in the writeContentIndexHtmlClose method
+if they chose foundation then we're printing the foundation close segment
+we're in the writeJFormIndexHtml method
+if they chose jForm then we're printing the jForm segment
+we're in the writeContentIndexHtmlClose method
+if they chose foundation then we're printing the foundation close segment
+2015-12-14 22:46:56,757 [pool-1-thread-1] DEBUG alphaWebService.Scaffolding  - in the getMsg method
+2015-12-14 22:46:56,761 [pool-1-thread-1] DEBUG alphaWebService.InterrogateParams  - we're in the interrogateParams method
+2015-12-14 22:46:56,762 [pool-1-thread-1] DEBUG alphaWebService.InterrogateParams  - we're in the interrogateCSSParams method
+2015-12-14 22:46:56,762 [pool-1-thread-1] DEBUG alphaWebService.InterrogateParams  - we're checking to see if the cssParam is empty and whether they chose Y
+2015-12-14 22:46:56,783 [pool-1-thread-1] DEBUG alphaWebService.InterrogateParams  - we're in the interrogateFrameworkParams method
+2015-12-14 22:46:56,783 [pool-1-thread-1] DEBUG alphaWebService.InterrogateParams  - we're checking to see if the framework param is empty
+2015-12-14 22:46:56,783 [pool-1-thread-1] DEBUG alphaWebService.InterrogateParams  - we're checking to see if they chose foundation
+2015-12-14 22:46:56,797 [pool-1-thread-1] DEBUG alphaWebService.InterrogateParams  - we're in the interrogateScriptParams method
+2015-12-14 22:46:57,816 [pool-1-thread-1] DEBUG alphaWebService.InterrogateParams  - we're in the writeIndexHTML method
+2015-12-14 22:46:57,820 [pool-1-thread-1] DEBUG alphaWebService.InterrogateParams  - we're in the writeHeadIndexHtml method
+2015-12-14 22:46:57,828 [pool-1-thread-1] DEBUG alphaWebService.InterrogateParams  - we're in the writeNavIndexHtml method
+2015-12-14 22:46:57,829 [pool-1-thread-1] DEBUG alphaWebService.InterrogateParams  - we're in the writeContentIndexHtmlOpen method
+2015-12-14 22:46:57,835 [pool-1-thread-1] DEBUG alphaWebService.InterrogateParams  - we're in the writeContentIndexHtmlClose method
+2015-12-14 22:46:57,835 [pool-1-thread-1] DEBUG alphaWebService.InterrogateParams  - if they chose foundation then we're printing the foundation close segment
+2015-12-14 22:46:57,839 [pool-1-thread-1] DEBUG alphaWebService.InterrogateParams  - we're in the writeJFormIndexHtml method
+2015-12-14 22:46:57,839 [pool-1-thread-1] DEBUG alphaWebService.InterrogateParams  - if they chose jForm then we're printing the jForm segment
+2015-12-14 22:46:57,877 [pool-1-thread-1] DEBUG alphaWebService.InterrogateParams  - we're in the writeContentIndexHtmlClose method
+2015-12-14 22:46:57,877 [pool-1-thread-1] DEBUG alphaWebService.InterrogateParams  - if they chose foundation then we're printing the foundation close segment
+2015-12-14 22:49:13,711 [main] DEBUG alphaWebService.Scaffolding  - in the getClichedMsg method
+2015-12-14 22:49:13,712 [main] DEBUG alphaWebService.Scaffolding  - in the getMsg method
+2015-12-14 22:49:13,715 [main] DEBUG alphaWebService.InterrogateParams  - we're in the interrogateParams method
+2015-12-14 22:49:13,715 [main] DEBUG alphaWebService.InterrogateParams  - we're in the interrogateCSSParams method
+2015-12-14 22:49:13,716 [main] DEBUG alphaWebService.InterrogateParams  - we're in the interrogateFrameworkParams method
+2015-12-14 22:49:13,716 [main] DEBUG alphaWebService.InterrogateParams  - we're checking to see if the framework param is empty
+2015-12-14 22:49:13,721 [main] DEBUG alphaWebService.InterrogateParams  - we're in the interrogateScriptParams method
+2015-12-14 22:49:13,721 [main] DEBUG alphaWebService.InterrogateParams  - we're in the writeIndexHTML method
+2015-12-14 22:49:13,729 [main] DEBUG alphaWebService.InterrogateParams  - we're in the writeHeadIndexHtml method
+2015-12-14 22:49:13,735 [main] DEBUG alphaWebService.InterrogateParams  - we're in the writeNavIndexHtml method
+2015-12-14 22:49:13,736 [main] DEBUG alphaWebService.InterrogateParams  - we're in the writeContentIndexHtmlOpen method
+2015-12-14 22:49:13,740 [main] DEBUG alphaWebService.InterrogateParams  - we're in the writeContentIndexHtmlClose method
+2015-12-14 22:49:13,743 [main] DEBUG alphaWebService.InterrogateParams  - we're in the writeJFormIndexHtml method
+2015-12-14 22:49:13,744 [main] DEBUG alphaWebService.InterrogateParams  - we're in the writeContentIndexHtmlClose method
+2015-12-14 22:49:38,262 [main] DEBUG alphaWebService.InterrogateParams  - we're in the interrogateParams method
+2015-12-14 22:49:38,263 [main] DEBUG alphaWebService.InterrogateParams  - we're in the interrogateCSSParams method
+2015-12-14 22:49:38,264 [main] DEBUG alphaWebService.InterrogateParams  - we're checking to see if the cssParam is empty and whether they chose Y
+2015-12-14 22:49:38,292 [main] DEBUG alphaWebService.InterrogateParams  - we're in the interrogateFrameworkParams method
+2015-12-14 22:49:38,292 [main] DEBUG alphaWebService.InterrogateParams  - we're checking to see if the framework param is empty
+2015-12-14 22:49:38,293 [main] DEBUG alphaWebService.InterrogateParams  - we're checking to see if they chose bootstrap
+2015-12-14 22:49:38,322 [main] DEBUG alphaWebService.InterrogateParams  - we're in the interrogateScriptParams method
+2015-12-14 22:49:39,425 [main] DEBUG alphaWebService.InterrogateParams  - we're in the writeIndexHTML method
+2015-12-14 22:49:39,429 [main] DEBUG alphaWebService.InterrogateParams  - we're in the writeHeadIndexHtml method
+2015-12-14 22:49:39,439 [main] DEBUG alphaWebService.InterrogateParams  - we're in the writeNavIndexHtml method
+2015-12-14 22:49:39,441 [main] DEBUG alphaWebService.InterrogateParams  - we're in the writeContentIndexHtmlOpen method
+2015-12-14 22:49:39,448 [main] DEBUG alphaWebService.InterrogateParams  - we're in the writeContentIndexHtmlClose method
+2015-12-14 22:49:39,449 [main] DEBUG alphaWebService.InterrogateParams  - if they chose bootstrap then we're printing the bootstrap close segment
+2015-12-14 22:49:39,454 [main] DEBUG alphaWebService.InterrogateParams  - we're in the writeJFormIndexHtml method
+2015-12-14 22:49:39,454 [main] DEBUG alphaWebService.InterrogateParams  - if they chose jForm then we're printing the jForm segment
+2015-12-14 22:49:39,484 [main] DEBUG alphaWebService.InterrogateParams  - we're in the writeContentIndexHtmlClose method
+2015-12-14 22:49:39,484 [main] DEBUG alphaWebService.InterrogateParams  - if they chose bootstrap then we're printing the bootstrap close segment

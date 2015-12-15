@@ -23,11 +23,12 @@ public class FileCreator {
 
 
     /**
-     * The run method calls all of the action methods and is called by the main method
-     * @param css
-     * @param framework
-     * @param script
-     * @return
+     * The run method gathers the users choices calls all of the action methods, passes the params to the
+     * interrogateParams method, and is called by the main method
+     * @param css is the css choice from the user
+     * @param framework is the framework choice from the user
+     * @param script is the script choice from the user
+     * @return a File that is the newlyCreatedZipFile based on the users selections
      * @throws IOException
      */
     public File run(String css, String framework, String script) throws IOException {
@@ -43,7 +44,7 @@ public class FileCreator {
 
         // FileCreator fileCreator = new FileCreator();
         InterrogateParams newInterrogation = new InterrogateParams();
-        newInterrogation.interrogateParams(css, framework, script);
+        newInterrogation.interrogateParams(cssparam, frameworkparam, scriptparam);
         newInterrogation.writeIndexHTML();
 
         startZipping();

@@ -2,6 +2,7 @@ package alphaWebService;
 
 import com.sun.jersey.api.container.httpserver.HttpServerFactory;
 import com.sun.net.httpserver.HttpServer;
+import org.apache.log4j.Logger;
 
 import javax.servlet.http.HttpServlet;
 import javax.ws.rs.GET;
@@ -20,6 +21,7 @@ import java.io.IOException;
 @Path("/")
 public class Scaffolding extends HttpServlet {
 
+    private final Logger logger = Logger.getLogger(Scaffolding.class);
     /**
      * The getMsg method creates an html file with the user's selections
      * @param style is the css option selected by the user
@@ -31,6 +33,7 @@ public class Scaffolding extends HttpServlet {
     @Path("/{style}/{framework}/{script}")
     @Produces("text/html")
     public File getMsg(@PathParam("style") String style,@PathParam("framework") String framework,@PathParam("script") String script) throws IOException {
+        logger.debug("in the getMsg method");
         String output = "<html><body><p>Style: " + style + "</p> <p>Framework: " + framework + "</p> <p>Script: " + script + "</p></body></html>";
         FileCreator creator = new FileCreator();
         File outputFile = creator.run(style, framework, script);
@@ -46,6 +49,7 @@ public class Scaffolding extends HttpServlet {
     @GET
     @Produces("text/plain")
     public String getClichedMessage() {
+        logger.debug("in the getClichedMsg method");
         String noParamsMessage = "No parameters were passed.";
         return noParamsMessage;
     }

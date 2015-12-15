@@ -1,5 +1,7 @@
 package alphaWebService;
 
+import org.apache.log4j.Logger;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.*;
@@ -8,7 +10,7 @@ import java.util.*;
  * Created by sschwert on 12/12/2015.
  */
 public class InterrogateParams {
-
+    private final Logger logger = Logger.getLogger(InterrogateParams.class);
     //---INSTANCE VARIABLES---//
     private final ProcessFiles newProcessFile = new ProcessFiles();
     private final CreateFiles newCreateFiles = new CreateFiles();
@@ -34,17 +36,20 @@ public class InterrogateParams {
      * @throws IOException
      */
     public void interrogateParams(String css, String framework, String script) throws IOException {
+        logger.debug("we're in the interrogateParams method");
         interrogateCSSParams(css);
         interrogateFrameworkParams(framework);
         interrogateScriptParams(script);
     } //end interrogateParams()
 
     /**
-     *
-     * @param css
+     * the interrogateCSSParams methods takes the css choice of the user and creates the appropriate files and copies
+     * them to the directory
+     * @param css represents whether the user wants css or not
      * @throws IOException
      */
     private void interrogateCSSParams(String css) throws IOException {
+        logger.debug("we're in the interrogateCSSParams method");
         File cssFileFolder = newCreateFiles.getCssFileFolder();
         File segmentCSSNavStyle = newCreateFiles.getSegmentCSSNavStyle();
         File productSiteCSSStyle = newCreateFiles.getProductSiteCSSStyle();
@@ -58,6 +63,7 @@ public class InterrogateParams {
 
         if (!cssparam.isEmpty() && cssparam.equals("Y"))
         {
+            logger.debug("we're checking to see if the cssParam is empty and whether they chose Y");
             newProcessFile.copyDirToDir(cssFileFolder, productFileFolder);
 
             // add nav style to /css/style.css
@@ -71,11 +77,13 @@ public class InterrogateParams {
 
 
     /**
-     * @param framework
+     * the interrogateFrameworkParams take the user's framework choice and creates the appropriate files based on two
+     * possible choices
+     * @param framework represents the user's framework choice
      * @throws IOException
      */
     private void interrogateFrameworkParams(String framework) throws IOException {
-
+        logger.debug("we're in the interrogateFrameworkParams method");
         File productAssetFileFolder = newCreateFiles.getProductAssetFileFolder();
         File bootstrapFileFolder = newCreateFiles.getBootstrapFileFolder();
         File refBootstrapCss = newCreateFiles.getRefBootstrapCss();
@@ -89,13 +97,15 @@ public class InterrogateParams {
         if (!frameworkparam.isEmpty())
         {
             String key = frameworkparam; //"bootstrap" or "foundation"
-
+            logger.debug("we're checking to see if the framework param is empty");
             switch (key)
             {
                 case "bootstrap":
+                    logger.debug("we're checking to see if they chose bootstrap");
                     boolBootstrap = true;
                     break;
                 case "foundation":
+                    logger.debug("we're checking to see if they chose foundation");
                     boolFoundation = true;
                     break;
             }
@@ -131,12 +141,13 @@ public class InterrogateParams {
     }
 
     /**
-     *
-     * @param jForm
+     * the interrogateScriptParams method takes the users script method and creates the appropriate files based on three
+     * possible choices
+     * @param jForm is the user's choice of script additions
      * @throws IOException
      */
     private void interrogateScriptParams(String jForm) throws IOException {
-
+        logger.debug("we're in the interrogateScriptParams method");
         File jsFileFolder = newCreateFiles.getJsFileFolder();
         File productFileFolder = newCreateFiles.getProductFileFolder();
         File refSiteJS = newCreateFiles.getRefSiteJS();
@@ -241,7 +252,7 @@ public class InterrogateParams {
     // maybe pull out Head, Nav, Content, and JForm sections into own methods?
     //write a root file for the web site files
     public void writeIndexHTML() throws IOException {
-
+        logger.debug("we're in the writeIndexHTML method");
         File productFileFolder = newCreateFiles.getProductFileFolder();
         File indexHTMLFile = newCreateFiles.getIndexHTMLFile();
         File segmentHelloWorld = newCreateFiles.getSegmentHelloWorld();
@@ -266,10 +277,13 @@ public class InterrogateParams {
 
 
     /**
-     *
+     * writeHeadIndexHtml creates the opening head, and closing head open body, sections of the html
+     * then calls methods that prints them to file, prints the styleQueue which goes in the html head
+     * and prints the body of the html file
      * @throws IOException
      */
     private void writeHeadIndexHtml() throws IOException {
+        logger.debug("we're in the writeHeadIndexHtml method");
         File segmentOpenHead = newCreateFiles.getSegmentOpenHead();
         File segmentCloseHeadOpenBody = newCreateFiles.getSegmentCloseHeadOpenBody();
 
@@ -280,10 +294,11 @@ public class InterrogateParams {
     }
 
     /**
-     *
+     * writeNavIndexHtml writes the sections of the html that create a nav bar
      * @throws IOException
      */
     private void writeNavIndexHtml() throws IOException {
+        logger.debug("we're in the writeNavIndexHtml method");
         File segmentNavOpen = newCreateFiles.getSegmentNavOpen();
         File segmentNavHtml = newCreateFiles.getSegmentNavHtml();
         File segmentNavClose = newCreateFiles.getSegmentNavClose();
@@ -302,14 +317,17 @@ public class InterrogateParams {
 
 
     /**
-     *
+     * the writeJFormIndexHtml creates a jquery validation ready form and writes it to the index.html file,
+     * then closes the index.html file
      * @throws IOException
      */
     private void writeJFormIndexHtml() throws IOException {
+        logger.debug("we're in the writeJFormIndexHtml method");
         File segmentJForm = newCreateFiles.getSegmentJForm();
 
         /* JForm */
         if (boolJForm) {
+            logger.debug("if they chose jForm then we're printing the jForm segment");
             newProcessFile.printToFile(segmentJForm, productIndexHTMLFile);
         }
 
@@ -318,10 +336,11 @@ public class InterrogateParams {
 
 
     /**
-     *
+     * writeContentIndexHtmlOpen opens and writes the framework sections of the index.html file based on the user's choice
      * @throws IOException
      */
     private void writeContentIndexHtmlOpen() throws IOException {
+        logger.debug("we're in the writeContentIndexHtmlOpen method");
         File segmentBootstrapOpen = newCreateFiles.getSegmentBootstrapOpen();
         File segmentFoundationOpen = newCreateFiles.getSegmentFoundationOpen();
 
@@ -336,18 +355,22 @@ public class InterrogateParams {
     }
 
     /**
-     *
+     * writeContentIndexHtmlClose method writes the framework linked sections of the index.html page that closes those
+     * sections based on the user's choice
      * @throws IOException
      */
     private void writeContentIndexHtmlClose() throws IOException {
+        logger.debug("we're in the writeContentIndexHtmlClose method");
         File segmentBootstrapClose = newCreateFiles.getSegmentBootstrapClose();
         File segmentFoundationClose = newCreateFiles.getSegmentFoundationClose();
 
         if (boolBootstrap) {
+            logger.debug("if they chose bootstrap then we're printing the bootstrap close segment");
             newProcessFile.printToFile(segmentBootstrapClose, productIndexHTMLFile);
         }
 
         if (boolFoundation) {
+            logger.debug("if they chose foundation then we're printing the foundation close segment");
             newProcessFile.printToFile(segmentFoundationClose, productIndexHTMLFile);
         }
     }
